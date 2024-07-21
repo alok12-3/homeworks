@@ -7,10 +7,10 @@ const TabBar = ({ setActiveTab }) => {
   const navigate = useNavigate();
 
   const tabs = [
-    { name: "learn", icon: <FaHome className="text-2xl" />, label: "Learn" },
+    { name: "learn", icon: <FaHome className="text-xl" />, label: "Learn" },
     {
       name: "profile",
-      icon: <FaUser className="text-2xl" />,
+      icon: <FaUser className="text-xl" />,
       label: "Profile",
     },
   ];
@@ -35,7 +35,7 @@ const TabBar = ({ setActiveTab }) => {
           onClick={() => handleTabClick(tab.name)}
         >
           {tab.icon}
-          <span className="text-sm">{tab.label}</span>
+          <span className="text-xs">{tab.label}</span>
         </div>
       ))}
     </div>
