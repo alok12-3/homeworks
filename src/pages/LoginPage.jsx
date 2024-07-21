@@ -13,7 +13,7 @@ const LoginPage = () => {
   return (
     <div className="flex items-center justify-center min-h-screen relative">
       <button
-        className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-3xl"
+        className="absolute top-4 right-8 text-gray-500 hover:text-gray-700 text-4xl"
         aria-label="Close"
         onClick={handleClick}
       >
