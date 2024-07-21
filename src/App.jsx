@@ -40,7 +40,10 @@ function App() {
         <Route path="/student/dashboard" element={<StudentDashboard />}>
           <Route path="learn" element={<Learn />} />
           <Route path="profile" element={<Profile />} />
-          <Route index element={<Navigate to="/dashboard/learn" replace />} />
+          <Route
+            index
+            element={<Navigate to="/student/dashboard/learn" replace />}
+          />
         </Route>
       </Routes>
     </Router>

@@ -7,8 +7,12 @@ const TabBar = ({ setActiveTab }) => {
   const navigate = useNavigate();
 
   const tabs = [
-    { name: "learn", icon: <FaHome />, label: "Learn" },
-    { name: "profile", icon: <FaUser />, label: "Profile" },
+    { name: "learn", icon: <FaHome className="text-2xl" />, label: "Learn" },
+    {
+      name: "profile",
+      icon: <FaUser className="text-2xl" />,
+      label: "Profile",
+    },
   ];
 
   const handleTabClick = (tabName) => {
@@ -18,17 +22,20 @@ const TabBar = ({ setActiveTab }) => {
   };
 
   return (
-    <div className="md:hidden fixed bottom-0 left-0 right-0 bg-gray-50 p-2 flex justify-around border-t border-gray-200">
+    <div className="md:hidden fixed bottom-0 left-0 right-0 bg-gray-50 p-4 flex justify-around border-t-2 border-gray-200">
       {tabs.map((tab) => (
         <div
           key={tab.name}
-          className={`flex flex-col items-center cursor-pointer ${
-            activeTab === tab.name ? "text-blue-500" : "text-gray-500"
+          className={`flex flex-col items-center cursor-pointer rounded-lg ${
+            activeTab === tab.name
+              ? "text-gray-900 bg-gray-200 p-2 border-2 border-gray-700 rounded-lg"
+              : "text-gray-400 p-2 border-2 border-gray-50 rounded-lg"
           }`}
+          style={{ borderRadius: "10px" }}
           onClick={() => handleTabClick(tab.name)}
         >
           {tab.icon}
-          <span className="text-xs">{tab.label}</span>
+          <span className="text-sm">{tab.label}</span>
         </div>
       ))}
     </div>
