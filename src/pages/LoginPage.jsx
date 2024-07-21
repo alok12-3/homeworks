@@ -2,13 +2,20 @@ import React from "react";
 import SolidButton from "../my_components/buttons/SolidButton";
 import LightButton from "../my_components/buttons/LightButton";
 import InputField from "../my_components/inputfields/InputField";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/");
+  };
   return (
     <div className="flex items-center justify-center min-h-screen relative">
       <button
         className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-3xl"
         aria-label="Close"
+        onClick={handleClick}
       >
         &times;
       </button>

@@ -21,17 +21,15 @@ import LandingPage from "./pages/LandingPage";
 import Learn from "../src/pages/learn";
 import Profile from "../src/pages/profile";
 import StudentDashboard from "./pages/student_dashboard/layout";
+import LoginPage from "./pages/LoginPage";
 
 function App() {
   return (
     <Router>
-      <LandingPage></LandingPage>
-      {/* <Navbar></Navbar> */}
-
-      {/* <Blankdiv /> */}
       <Routes>
-        {/* <Route path="/" element={<Home />} />
-        <Route path="/quiz" element={<Quiz />} />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        {/* <Route path="/quiz" element={<Quiz />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/history" element={<History />} />
         <Route path="/teacher/:username" element={<TeacherLandingPage />} />

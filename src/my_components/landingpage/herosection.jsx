@@ -22,6 +22,7 @@ export default function HeroSection() {
             <LightButton
               buttonText="I ALREADY HAVE AN ACCOUNT"
               widthPercentage="90%"
+              route="/login"
             />
           </div>
         </div>
