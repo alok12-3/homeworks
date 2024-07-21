@@ -10,7 +10,7 @@ export default function HeroSection() {
           <img
             src={heroimg}
             alt="Placeholder"
-            style={{ width: "600px", height: "400px", objectFit: "cover" }}
+            className="w-full h-auto max-h-96 object-cover"
           />
         </div>
         <div className="lg:w-3/5 text-center lg:text-left">
