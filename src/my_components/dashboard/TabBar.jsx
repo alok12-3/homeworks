@@ -35,7 +35,6 @@ const TabBar = ({ setActiveTab }) => {
           onClick={() => handleTabClick(tab.name)}
         >
           {tab.icon}
-          <span className="text-xs">{tab.label}</span>
         </div>
       ))}
     </div>
