@@ -12,7 +12,7 @@ const LoginPage = () => {
       >
         &times;
       </button>
-      <div className="bg-white px-8 py-4 rounded w-full max-w-md">
+      <div className="bg-white px-8 rounded w-full max-w-md">
         <h2 className="text-2xl font-bold mb-8 text-center">Log in</h2>
         <form>
           <InputField type="email" placeholder="Email" />
