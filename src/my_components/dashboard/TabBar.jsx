@@ -14,7 +14,7 @@ const TabBar = ({ setActiveTab }) => {
   const handleTabClick = (tabName) => {
     setActiveTabLocal(tabName);
     setActiveTab(tabName);
-    navigate(`/dashboard/${tabName}`);
+    navigate(`/student/dashboard/${tabName}`);
   };
 
   return (
