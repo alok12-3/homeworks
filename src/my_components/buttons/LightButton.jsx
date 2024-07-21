@@ -6,7 +6,9 @@ const LightButton = ({ buttonText, widthPercentage, route }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(route);
+    setTimeout(() => {
+      navigate(route);
+    }, 130); // 0.15 seconds
   };
 
   return (
