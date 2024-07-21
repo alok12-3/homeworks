@@ -5,7 +5,7 @@ import heroimg from "/assets/heroimg.png"; // Adjust the path based on your file
 export default function HeroSection() {
   return (
     <div className="bg-white flex items-center justify-center min-h-screen">
-      <div className="px-6 lg:px-8 flex flex-col lg:flex-row items-center max-w-6xl py-32 sm:py-40 lg:py-20">
+      <div className="px-6 lg:px-8 flex flex-col lg:flex-row items-center max-w-6xl sm:py-40 lg:py-10">
         <div className="lg:w-2/5 mt-10 lg:mt-0 lg:pr-8">
           <img
             src={heroimg}

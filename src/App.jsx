@@ -16,23 +16,21 @@ import LandingPage from "./pages/LandingPage";
 function App() {
   return (
     <Router>
-      <div className="app-background">
-        <LandingPage></LandingPage>
-        {/* <Navbar></Navbar> */}
-        <div className="main-content">
-          <Blankdiv />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/quiz" element={<Quiz />} />
-            <Route path="/admin" element={<Admin />} />
-            <Route path="/history" element={<History />} />
-            <Route path="/teacher/:username" element={<TeacherLandingPage />} />
-            <Route path="/teacher" element={<TeacherLogin />} />
-            <Route path="/School" element={<SchoolManagement />} />
-            <Route path="/studentlogin" element={<StudentsLoginPage />} />
-            <Route path="/student/:username" element={<StudentLandingPage />} />
-          </Routes>
-        </div>
+      <LandingPage></LandingPage>
+      {/* <Navbar></Navbar> */}
+      <div className="main-content">
+        {/* <Blankdiv /> */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/quiz" element={<Quiz />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/history" element={<History />} />
+          <Route path="/teacher/:username" element={<TeacherLandingPage />} />
+          <Route path="/teacher" element={<TeacherLogin />} />
+          <Route path="/School" element={<SchoolManagement />} />
+          <Route path="/studentlogin" element={<StudentsLoginPage />} />
+          <Route path="/student/:username" element={<StudentLandingPage />} />
+        </Routes>
       </div>
     </Router>
   );
