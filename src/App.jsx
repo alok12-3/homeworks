@@ -39,11 +39,11 @@ function App() {
         <Route path="/School" element={<SchoolManagement />} /> */}
         {/* <Route path="/studentlogin" element={<StudentsLoginPage />} />
         <Route path="/student/:username" element={<StudentLandingPage />} /> */}
-        <Route path="/dashboard" element={<StudentDashboard />}>
+        {/* <Route path="/dashboard" element={<StudentDashboard />}>
           <Route path="learn" element={<Learn />} />
           <Route path="profile" element={<Profile />} />
           <Route index element={<Navigate to="/dashboard/learn" replace />} />
-        </Route>
+        </Route> */}
         {/* <Route path="/" element={<Navigate to="/dashboard" replace />} /> */}
       </Routes>
     </Router>

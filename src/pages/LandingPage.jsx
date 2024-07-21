@@ -5,8 +5,8 @@ import LoginPage from "./LoginPage";
 const LandingPage = () => {
   return (
     <>
-      {/* <Navbar></Navbar>
-      <HeroSection></HeroSection> */}
+      <Navbar></Navbar>
+      <HeroSection></HeroSection>
       {/* <LoginPage></LoginPage> */}
       {/* <StudentDashboard></StudentDashboard> */}
     </>
