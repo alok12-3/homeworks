@@ -5,7 +5,7 @@ import InputField from "../my_components/inputfields/InputField";
 const LoginPage = () => {
   return (
     <div className="flex items-center justify-center min-h-screen">
-      <div className="bg-white p-8 rounded w-full max-w-md">
+      <div className="bg-white px-8  rounded w-full max-w-md">
         <div className="text-right">
           <button className="text-gray-500 hover:text-gray-700">&times;</button>
         </div>
