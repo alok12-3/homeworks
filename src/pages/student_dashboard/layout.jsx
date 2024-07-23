@@ -7,11 +7,13 @@ const StudentDashboard = () => {
   const [activeTab, setActiveTab] = useState("learn");
 
   return (
-    <div className="flex min-h-screen">
-      <Sidebar setActiveTab={setActiveTab} />
-      <main className="flex-1">
+    <div className="flex h-screen">
+      <div className="w-1/7 md:w-1/4 lg:w-1/5 ">
+        <Sidebar setActiveTab={setActiveTab} />
+      </div>
+      <div className="flex-1">
         <Outlet />
-      </main>
+      </div>
       <TabBar setActiveTab={setActiveTab} />
     </div>
   );

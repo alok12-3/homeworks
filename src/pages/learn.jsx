@@ -1,19 +1,113 @@
-// src/pages/DemoPage1.tsx
-
 import React from "react";
 
-const LearnPage = () => {
+const Learn = () => {
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <div className="bg-white p-6 rounded-lg shadow-md text-center">
-        <h1 className="text-2xl font-semibold text-gray-800">Demo Page 1</h1>
-        <p className="text-gray-600 mt-2">
-          This is a simple page demonstrating the usage of navigation in a
-          TypeScript React component.
-        </p>
+    <div className="p-4">
+      <h1 className="text-2xl font-bold mb-4">Learn</h1>
+      {/* Scrollable content goes here */}
+      <div className="space-y-4">
+        <div className="bg-white p-4 rounded shadow">
+          Content 1 Content 1 Content 1 Content 1
+        </div>
+        <div className="bg-white p-4 rounded shadow">
+          Content 1 Content 1 Content 1 Content 1
+        </div>
+        <div className="bg-white p-4 rounded shadow">
+          Content 1 Content 1 Content 1 Content 1
+        </div>
+        <div className="bg-white p-4 rounded shadow">
+          Content 1 Content 1 Content 1 Content 1
+        </div>
+        <div className="bg-white p-4 rounded shadow">
+          Content 1 Content 1 Content 1 Content 1
+        </div>
+        <div className="bg-white p-4 rounded shadow">
+          Content 1 Content 1 Content 1 Content 1
+        </div>
+        <div className="bg-white p-4 rounded shadow">
+          Content 1 Content 1 Content 1 Content 1
+        </div>
+        <div className="bg-white p-4 rounded shadow">
+          Content 1 Content 1 Content 1 Content 1
+        </div>
+        <div className="bg-white p-4 rounded shadow">
+          Content 1 Content 1 Content 1 Content 1
+        </div>
+        <div className="bg-white p-4 rounded shadow">
+          Content 1 Content 1 Content 1 Content 1
+        </div>
+        <div className="bg-white p-4 rounded shadow">
+          Content 1 Content 1 Content 1 Content 1
+        </div>
+        <div className="bg-white p-4 rounded shadow">
+          Content 1 Content 1 Content 1 Content 1
+        </div>
+        <div className="bg-white p-4 rounded shadow">
+          Content 1 Content 1 Content 1 Content 1
+        </div>
+        <div className="bg-white p-4 rounded shadow">
+          Content 1 Content 1 Content 1 Content 1
+        </div>
+        <div className="bg-white p-4 rounded shadow">
+          Content 1 Content 1 Content 1 Content 1
+        </div>
+        <div className="bg-white p-4 rounded shadow">
+          Content 1 Content 1 Content 1 Content 1
+        </div>
+        <div className="bg-white p-4 rounded shadow">
+          Content 1 Content 1 Content 1 Content 1
+        </div>
+        <div className="bg-white p-4 rounded shadow">
+          Content 1 Content 1 Content 1 Content 1
+        </div>
+        <div className="bg-white p-4 rounded shadow">
+          Content 1 Content 1 Content 1 Content 1
+        </div>
+        <div className="bg-white p-4 rounded shadow">
+          Content 1 Content 1 Content 1 Content 1
+        </div>
+        <div className="bg-white p-4 rounded shadow">
+          Content 1 Content 1 Content 1 Content 1 Content 1 Content 1 Content 1
+          Content 1 Content 1 Content 1 Content 1 Content 1 Content 1 Content 1
+          Content 1 Content 1 Content 1 Content 1 Content 1 Content 1
+        </div>
+        <div className="bg-white p-4 rounded shadow">
+          Content 1 Content 1 Content 1 Content 1
+        </div>
+        <div className="bg-white p-4 rounded shadow">
+          Content 1 Content 1 Content 1 Content 1
+        </div>
+        <div className="bg-white p-4 rounded shadow">
+          Content 1 Content 1 Content 1 Content 1
+        </div>
+        <div className="bg-white p-4 rounded shadow">
+          Content 1 Content 1 Content 1 Content 1
+        </div>
+        <div className="bg-white p-4 rounded shadow">
+          Content 1 Content 1 Content 1 Content 1
+        </div>
+        <div className="bg-white p-4 rounded shadow">
+          Content 1 Content 1 Content 1 Content 1
+        </div>
+        <div className="bg-white p-4 rounded shadow">
+          Content 1 Content 1 Content 1 Content 1
+        </div>
+
+        <div className="bg-white p-4 rounded shadow">Content 2</div>
+        <div className="bg-white p-4 rounded shadow">Content 3</div>
+        <div className="bg-white p-4 rounded shadow">Content 4</div>
+        <div className="bg-white p-4 rounded shadow">Content 1</div>
+        <div className="bg-white p-4 rounded shadow">Content 2</div>
+        <div className="bg-white p-4 rounded shadow">Content 3</div>
+        <div className="bg-white p-4 rounded shadow">Content 4</div>
+        <div className="bg-white p-4 rounded shadow">Content 1</div>
+        <div className="bg-white p-4 rounded shadow">Content 2</div>
+        <div className="bg-white p-4 rounded shadow">Content 3</div>
+        <div className="bg-white p-4 rounded shadow">Content 4</div>
+        {/* Add more content as needed */}
       </div>
     </div>
   );
 };
 
-export default LearnPage;
+export default Learn;

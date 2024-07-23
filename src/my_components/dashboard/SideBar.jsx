@@ -20,11 +20,11 @@ const Sidebar = ({ setActiveTab }) => {
 
   return (
     <div
-      className={`hidden md:flex flex-col ${
+      className={`hidden md:flex flex-col border-r-2 border-gray-200 fixed min-h-screen  ${
         collapsed ? "w-20" : "w-60"
-      } bg-gray-50`}
+      } bg-white`}
     >
-      <div className="flex items-center justify-between px-8 py-6">
+      <div className="flex items-center justify-between px-8 py-6 ">
         {!collapsed && (
           <img
             src="/assets/logo.png"
