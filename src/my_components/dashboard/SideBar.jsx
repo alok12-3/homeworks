@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { FaHome, FaUser, FaBars, FaArrowLeft } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useSidebar } from "../../hooks/useSidebar";
 
 const Sidebar = ({ setActiveTab }) => {
   const [activeTab, setActiveTabLocal] = useState("learn");
-  const [collapsed, setCollapsed] = useState(false);
+  const { collapsed, setCollapsed } = useSidebar();
   const navigate = useNavigate();
 
   const tabs = [
@@ -20,11 +21,11 @@ const Sidebar = ({ setActiveTab }) => {
 
   return (
     <div
-      className={`hidden md:flex flex-col border-r-2 border-gray-200 fixed min-h-screen  ${
+      className={`hidden md:flex flex-col border-r-2 border-gray-200 min-h-screen ${
         collapsed ? "w-20" : "w-60"
       } bg-white`}
     >
-      <div className="flex items-center justify-between px-8 py-6 ">
+      <div className="flex items-center justify-between px-8 py-6">
         {!collapsed && (
           <img
             src="/assets/logo.png"
