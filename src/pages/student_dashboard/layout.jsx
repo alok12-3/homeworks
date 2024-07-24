@@ -9,7 +9,7 @@ const StudentDashboardContent = ({ setActiveTab }) => {
 
   return (
     <div className="flex ">
-      <div className="fixed ">
+      <div className="fixed">
         <Sidebar setActiveTab={setActiveTab} />
       </div>
       <div className={`flex-1 ${collapsed ? "md:pl-20" : "md:pl-60"} pl-0`}>
