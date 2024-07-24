@@ -9,9 +9,7 @@ import Home from "./pages/Home";
 import Quiz from "./pages/Quiz";
 import Admin from "./pages/Admin";
 import History from "./pages/History";
-import Navbar from "./indcomponents/Navbar";
 import "./App.css";
-import Blankdiv from "./indcomponents/Blankdiv";
 import TeacherLandingPage from "./Teachers/TeacherLandingPage/TecherLandingPage";
 import TeacherLogin from "./Teachers/TeacherLogin/TeacherLogin"; // Adjust the import path as necessary
 import SchoolManagement from "./SchoolManagementSystem/SchoolManagement"; // Adjust the import path as necessary
