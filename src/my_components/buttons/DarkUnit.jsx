@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import styles from "./dark.unit.module.css";
 import { useNavigate } from "react-router-dom";
-import Popup from "./Popup"; // Import the Popup component
+import Popup from "../popup/Popup"; // Import the Popup component
 
 const DarkUnit = ({ buttonText, widthPercentage, route, topicName }) => {
   const navigate = useNavigate();
