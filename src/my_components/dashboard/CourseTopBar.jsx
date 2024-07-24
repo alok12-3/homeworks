@@ -3,7 +3,7 @@ import LightButton from "../buttons/LightButton";
 export default function CourseTopBar({ title, description, color }) {
   return (
     <header
-      className="flex items-center justify-between rounded-xl text-white sticky top-0 p-4 mb-5 sm:z-50 "
+      className="flex items-center justify-between rounded-xl text-white sticky top-4 p-4 mb-5 sm:z-50 "
       style={{ backgroundColor: color }} // Corrected the style property
     >
       <div className="space-y-1">
