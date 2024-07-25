@@ -1,18 +1,14 @@
 import { useState } from "react";
-import { FaHome, FaUser } from "react-icons/fa";
+import { FaDumbbell, FaQuestionCircle } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 
 const TabBar = ({ setActiveTab }) => {
-  const [activeTab, setActiveTabLocal] = useState("learn");
+  const [activeTab, setActiveTabLocal] = useState("practice");
   const navigate = useNavigate();
 
   const tabs = [
-    { name: "learn", icon: <FaHome className="text-xl" />, label: "Learn" },
-    {
-      name: "profile",
-      icon: <FaUser className="text-xl" />,
-      label: "Profile",
-    },
+    { name: "practice", icon: <FaDumbbell />, label: "Practice" }, // Added FaDumbbell for practice
+    { name: "quiz", icon: <FaQuestionCircle />, label: "Quiz" }, // Added FaQuestionCircle for quiz
   ];
 
   const handleTabClick = (tabName) => {

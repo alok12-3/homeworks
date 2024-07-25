@@ -1,16 +1,21 @@
 import { useState } from "react";
-import { FaHome, FaUser, FaBars, FaArrowLeft } from "react-icons/fa";
+import {
+  FaQuestionCircle,
+  FaDumbbell,
+  FaBars,
+  FaArrowLeft,
+} from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { useSidebar } from "../../hooks/useSidebar";
 
 const Sidebar = ({ setActiveTab }) => {
-  const [activeTab, setActiveTabLocal] = useState("learn");
+  const [activeTab, setActiveTabLocal] = useState("practice");
   const { collapsed, setCollapsed } = useSidebar();
   const navigate = useNavigate();
 
   const tabs = [
-    { name: "learn", icon: <FaHome />, label: "Learn" },
-    { name: "profile", icon: <FaUser />, label: "Profile" },
+    { name: "practice", icon: <FaDumbbell />, label: "Practice" }, // Added FaDumbbell for practice
+    { name: "quiz", icon: <FaQuestionCircle />, label: "Quiz" }, // Added FaQuestionCircle for quiz
   ];
 
   const handleTabClick = (tabName) => {

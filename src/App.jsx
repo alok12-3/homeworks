@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import React, { useState } from "react";
 import Home from "./pages/Home";
-import Quiz from "./pages/Quiz";
+import Quiz from "./components/ui/Quiz";
 import Admin from "./pages/Admin";
 import History from "./pages/History";
 import "./App.css";
@@ -17,7 +17,7 @@ import StudentsLoginPage from "./Student/LoginCreation";
 import StudentLandingPage from "./Student/StudentLandingPage"; // Adjust the import path as necessary
 import LandingPage from "./pages/LandingPage";
 import Learn from "../src/pages/learn";
-import Profile from "../src/pages/profile";
+import Profile from "./pages/QuizPage";
 import StudentDashboard from "./pages/student_dashboard/layout";
 import LoginPage from "./pages/LoginPage";
 
@@ -36,11 +36,11 @@ function App() {
         {/* <Route path="/studentlogin" element={<StudentsLoginPage />} />
         <Route path="/student/:username" element={<StudentLandingPage />} /> */}
         <Route path="/student/dashboard" element={<StudentDashboard />}>
-          <Route path="learn" element={<Learn />} />
-          <Route path="profile" element={<Profile />} />
+          <Route path="practice" element={<Learn />} />
+          <Route path="quiz" element={<Profile />} />
           <Route
             index
-            element={<Navigate to="/student/dashboard/learn" replace />}
+            element={<Navigate to="/student/dashboard/practice" replace />}
           />
         </Route>
       </Routes>
