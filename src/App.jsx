@@ -41,7 +41,7 @@ function App() {
 
           <Route
             index
-            element={<Navigate to="/student/dashboard/practice" replace />}
+            element={<Navigate to="/student/dashboard/quiz" replace />}
           />
         </Route>
       </Routes>
