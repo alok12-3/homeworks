@@ -17,9 +17,11 @@ const cardsData = [
   { topic: "Topic 1", chapter: "Chapter 1", score: "85/100", status: "Done" },
 ];
 
-const Card = ({ topic, chapter, score, status }) => (
+const Card = ({ topic, chapter, score, status, isLast }) => (
   <div
-    className="w-full max-w-sm bg-white border border-gray-200   m-4"
+    className={`w-full max-w-sm bg-white border border-gray-200 m-4 ${
+      isLast ? "mb-20" : ""
+    }`}
     style={{ borderRadius: "1rem" }}
   >
     <div className="flex flex-col items-center p-4">
@@ -64,9 +66,6 @@ const Card = ({ topic, chapter, score, status }) => (
 
 const QuizPage = () => (
   <>
-    <div className="px-4">
-      <LearnNavbar color="white" />
-    </div>
     <div className="flex flex-wrap justify-center">
       {cardsData.map((card, index) => (
         <Card
@@ -75,6 +74,7 @@ const QuizPage = () => (
           chapter={card.chapter}
           score={card.score}
           status={card.status}
+          isLast={index === cardsData.length - 1}
         />
       ))}
     </div>
