@@ -1,95 +1,84 @@
 import React from "react";
-import CourseTopBar from "../my_components/dashboard/CourseTopBar";
-import Unit from "../my_components/content/Unit";
 import LearnNavbar from "../my_components/dashboard/Navbar";
 
-const QuizPage = () => {
-  return (
-    <>
-      <div className="px-4">
-        <LearnNavbar color="white"></LearnNavbar>
-      </div>
-      <div className="relative overflow-x-auto rounded-lg p-4">
-        <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 sm:rounded-lg">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-500 dark:bg-gray-700 dark:text-gray-400 rounded-t-lg ">
-            <tr>
-              <th scope="col" className="px-6 py-6">
-                Assignment
-              </th>
-              <th scope="col" className="px-6 py-6">
-                Status
-              </th>
-              <th scope="col" className="px-6 py-6">
-                Score
-              </th>
-              <th scope="col" className="px-6 py-6">
-                Action
-              </th>
-            </tr>
-          </thead>
+const cardsData = [
+  {
+    topic: "Topic 3",
+    chapter: "Chapter 3",
+    score: "75/100",
+    status: "Pending",
+  },
+  {
+    topic: "Topic 3",
+    chapter: "Chapter 3",
+    score: "75/100",
+    status: "Pending",
+  },
+  { topic: "Topic 1", chapter: "Chapter 1", score: "85/100", status: "Done" },
+];
 
-          <tbody>
-            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-              <th
-                scope="row"
-                className="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
-              >
-                <div className="ps-3">
-                  <div className="text-base font-semibold">
-                    Graphs of the Polynomials
-                  </div>
-                  <div className="font-normal text-gray-500">Polynomials</div>
-                </div>
-              </th>
-              <td className="px-6 py-4">
-                <div className="flex items-center">
-                  <div className="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div>{" "}
-                  Solved
-                </div>
-              </td>
-              <td className="px-6 py-4">50/100</td>
-              <td className="px-6 py-4">
-                <a
-                  href="#"
-                  className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                >
-                  RETAKE
-                </a>
-              </td>
-            </tr>
-            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-              <th
-                scope="row"
-                className="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
-              >
-                <div className="ps-3">
-                  <div className="text-base font-semibold">
-                    Finding the roots
-                  </div>
-                  <div className="font-normal text-gray-500">Polynomials</div>
-                </div>
-              </th>
-              <td className="px-6 py-4">
-                <div className="flex items-center">
-                  <div className="h-2.5 w-2.5 rounded-full bg-red-500 me-2"></div>{" "}
-                  Incomplete
-                </div>
-              </td>
-              <td className="px-6 py-4">_ _ _</td>
-              <td className="px-6 py-4">
-                <a
-                  href="#"
-                  className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                >
-                  SOLVE
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+const Card = ({ topic, chapter, score, status }) => (
+  <div
+    className="w-full max-w-sm bg-white border border-gray-200   m-4"
+    style={{ borderRadius: "1rem" }}
+  >
+    <div className="flex flex-col items-center p-5">
+      <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
+        {topic}
+      </h5>
+      <span className="text-sm text-gray-500 dark:text-gray-400">
+        {chapter}
+      </span>
+      <div className="flex items-center justify-between w-full mt-4 md:mt-6">
+        <div className="flex items-center">
+          <span className="text-sm text-gray-500 dark:text-gray-400 mr-2">
+            Score:
+          </span>
+          <span className="text-sm font-bold text-gray-900 dark:text-white">
+            {score}
+          </span>
+        </div>
+        <div
+          className={`relative grid items-center font-sans font-bold uppercase whitespace-nowrap select-none py-1 px-2 text-xs rounded-md ${
+            status === "Done"
+              ? "bg-green-500/20 text-green-900"
+              : status === "In Progress"
+              ? "bg-yellow-500/20 text-yellow-900"
+              : "bg-red-500/20 text-red-900"
+          }`}
+        >
+          <span className="">{status}</span>
+        </div>
       </div>
-    </>
-  );
-};
+      <div className="flex mt-4 md:mt-6">
+        <a
+          href="#"
+          className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          {status === "Done" ? "Revisit" : "Solve"}
+        </a>
+      </div>
+    </div>
+  </div>
+);
+
+const QuizPage = () => (
+  <>
+    <div className="px-4">
+      <LearnNavbar color="white" />
+    </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      {cardsData.map((card, index) => (
+        <Card
+          key={index}
+          topic={card.topic}
+          chapter={card.chapter}
+          score={card.score}
+          status={card.status}
+        />
+      ))}
+    </div>
+  </>
+);
 
 export default QuizPage;

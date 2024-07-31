@@ -4,13 +4,13 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaCalendarAlt } from "react-icons/fa";
 
 const TabBar = ({ setActiveTab }) => {
-  const [activeTab, setActiveTabLocal] = useState("practice");
+  const [activeTab, setActiveTabLocal] = useState("quiz");
   const navigate = useNavigate();
 
   const tabs = [
     { name: "quiz", icon: <FaQuestionCircle />, label: "Quiz" }, // Added FaQuestionCircle for quiz
-    { name: "daily", icon: <FaCalendarAlt />, label: "Daily" },
-    { name: "practice", icon: <FaDumbbell />, label: "Practice" }, // Added FaDumbbell for practice
+    // { name: "daily", icon: <FaCalendarAlt />, label: "Daily" },
+    // { name: "practice", icon: <FaDumbbell />, label: "Practice" }, // Added FaDumbbell for practice
   ];
 
   const handleTabClick = (tabName) => {
