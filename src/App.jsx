@@ -38,7 +38,7 @@ function App() {
         <Route path="/student/dashboard" element={<StudentDashboard />}>
           <Route path="practice" element={<Practice />} />
           <Route path="quiz" element={<Quiz />} />
-          {/* <Route path="daily" element={<Daily />} /> */}
+          <Route path="daily" element={<Daily />} />
 
           <Route
             index

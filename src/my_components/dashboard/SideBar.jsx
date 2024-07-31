@@ -7,6 +7,7 @@ import {
 } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { useSidebar } from "../../hooks/useSidebar";
+import { FaCalendarAlt } from "react-icons/fa";
 
 const Sidebar = ({ setActiveTab }) => {
   const [activeTab, setActiveTabLocal] = useState("practice");
@@ -14,9 +15,9 @@ const Sidebar = ({ setActiveTab }) => {
   const navigate = useNavigate();
 
   const tabs = [
-    { name: "practice", icon: <FaDumbbell />, label: "Practice" }, // Added FaDumbbell for practice
     { name: "quiz", icon: <FaQuestionCircle />, label: "Quiz" }, // Added FaQuestionCircle for quiz
-    // { name: "daily", icon: <FaQuestionCircle />, label: "Daily" }, // Added FaQuestionCircle for quiz
+    { name: "daily", icon: <FaCalendarAlt />, label: "Daily" },
+    { name: "practice", icon: <FaDumbbell />, label: "Practice" }, // Added FaDumbbell for practice
   ];
 
   const handleTabClick = (tabName) => {

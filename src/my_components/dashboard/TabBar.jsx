@@ -1,15 +1,16 @@
 import { useState } from "react";
 import { FaDumbbell, FaQuestionCircle } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
+import { FaCalendarAlt } from "react-icons/fa";
 
 const TabBar = ({ setActiveTab }) => {
   const [activeTab, setActiveTabLocal] = useState("practice");
   const navigate = useNavigate();
 
   const tabs = [
-    { name: "practice", icon: <FaDumbbell />, label: "Practice" }, // Added FaDumbbell for practice
     { name: "quiz", icon: <FaQuestionCircle />, label: "Quiz" }, // Added FaQuestionCircle for quiz
-    // { name: "daily", icon: <FaQuestionCircle />, label: "Daily" }, // Added FaQuestionCircle for quiz`
+    { name: "daily", icon: <FaCalendarAlt />, label: "Daily" },
+    { name: "practice", icon: <FaDumbbell />, label: "Practice" }, // Added FaDumbbell for practice
   ];
 
   const handleTabClick = (tabName) => {

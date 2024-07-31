@@ -1,7 +1,7 @@
-import QuizPage from "../../QuizPage";
+import DailyPage from "../../DailyPage";
 
-const Quiz = () => {
-  return <QuizPage />;
+const Daily = () => {
+  return <DailyPage />;
 };
 
-export default Quiz;
+export default Daily;
