@@ -1,7 +1,7 @@
 import React from "react";
-import SolidButton from "../my_components/buttons/SolidButton";
-import LightButton from "../my_components/buttons/LightButton";
-import InputField from "../my_components/inputfields/InputField";
+import SolidButton from "../../my_components/buttons/SolidButton";
+import LightButton from "../../my_components/buttons/LightButton";
+import InputField from "../../my_components/inputfields/InputField";
 import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {

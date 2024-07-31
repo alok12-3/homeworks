@@ -21,7 +21,7 @@ const StudentDashboardContent = ({ setActiveTab }) => {
 };
 
 const StudentDashboard = () => {
-  const [activeTab, setActiveTab] = useState("learn");
+  const [activeTab, setActiveTab] = useState("quiz");
 
   return (
     <SidebarProvider>

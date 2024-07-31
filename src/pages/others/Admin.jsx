@@ -3,7 +3,6 @@ import axios from "axios";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import "./AdminPanel.css";
 
 function Admin() {
   const [question, setQuestion] = useState("");

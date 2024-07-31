@@ -1,5 +1,5 @@
 import React from "react";
-import LearnNavbar from "../my_components/dashboard/Navbar";
+import LearnNavbar from "../../../my_components/dashboard/Navbar";
 
 const cardsData = [
   {
