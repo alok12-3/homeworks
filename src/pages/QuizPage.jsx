@@ -22,7 +22,7 @@ const Card = ({ topic, chapter, score, status }) => (
     className="w-full max-w-sm bg-white border border-gray-200   m-4"
     style={{ borderRadius: "1rem" }}
   >
-    <div className="flex flex-col items-center p-5">
+    <div className="flex flex-col items-center p-4">
       <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
         {topic}
       </h5>
@@ -67,7 +67,7 @@ const QuizPage = () => (
     <div className="px-4">
       <LearnNavbar color="white" />
     </div>
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div className="flex flex-wrap justify-center">
       {cardsData.map((card, index) => (
         <Card
           key={index}
