@@ -16,6 +16,7 @@ const Sidebar = ({ setActiveTab }) => {
   const tabs = [
     { name: "practice", icon: <FaDumbbell />, label: "Practice" }, // Added FaDumbbell for practice
     { name: "quiz", icon: <FaQuestionCircle />, label: "Quiz" }, // Added FaQuestionCircle for quiz
+    { name: "daily", icon: <FaQuestionCircle />, label: "Daily" }, // Added FaQuestionCircle for quiz
   ];
 
   const handleTabClick = (tabName) => {

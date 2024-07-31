@@ -3,7 +3,7 @@ import CourseTopBar from "../my_components/dashboard/CourseTopBar";
 import Unit from "../my_components/content/Unit";
 import LearnNavbar from "../my_components/dashboard/Navbar";
 
-const Learn = () => {
+const PracticePage = () => {
   return (
     <>
       <div className="px-4">
@@ -22,4 +22,4 @@ const Learn = () => {
   );
 };
 
-export default Learn;
+export default PracticePage;
