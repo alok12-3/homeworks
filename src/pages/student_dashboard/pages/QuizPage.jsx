@@ -3,18 +3,23 @@ import LearnNavbar from "../../../my_components/dashboard/Navbar";
 
 const cardsData = [
   {
-    topic: "Topic 3",
-    chapter: "Chapter 3",
+    topic: "Nature of the roots",
+    chapter: "Quadratic equations",
     score: "75/100",
     status: "Pending",
   },
   {
-    topic: "Topic 3",
-    chapter: "Chapter 3",
+    topic: "Finding the roots",
+    chapter: "Quadratic equations",
     score: "75/100",
     status: "Pending",
   },
-  { topic: "Topic 1", chapter: "Chapter 1", score: "85/100", status: "Done" },
+  {
+    topic: "Graph of a polynomial",
+    chapter: "Quadratic equations",
+    score: "85/100",
+    status: "Done",
+  },
 ];
 
 const Card = ({ topic, chapter, score, status, isLast }) => (
