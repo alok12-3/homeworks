@@ -20,19 +20,29 @@ import DemoPage from "./pages/Demo";
 import StudentDashboard from "./Student/dashboard/layout";
 import QuizPage from "../src/Student/dashboard/pages/QuizPage";
 
+import ProtectedRoute from "./Authentication/ProtectedRoute";
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/quiz" element={<Quiz />} />
-        <Route path="/admin" element={<Admin />} />
-        <Route path="/history" element={<History />} />
-        <Route path="/teacher/:username" element={<TeacherLandingPage />} />
+        <Route path="/quiz" element={<ProtectedRoute element={Quiz} />} />
+        <Route path="/admin" element={<ProtectedRoute element={Admin} />} />
+        <Route path="/history" element={<ProtectedRoute element={History} />} />
+        <Route
+          path="/teacher/:username"
+          element={<ProtectedRoute element={TeacherLandingPage} />}
+        />
         <Route path="/teacher" element={<TeacherLogin />} />
-        <Route path="/School" element={<SchoolManagement />} />
+        <Route
+          path="/School"
+          element={<ProtectedRoute element={SchoolManagement} />}
+        />
         <Route path="/studentlogin" element={<StudentsLoginPage />} />
-        <Route path="/student/:username" element={<StudentLandingPage />} />
+        <Route
+          path="/student/:username"
+          element={<ProtectedRoute element={StudentLandingPage} />}
+        />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/demo" element={<DemoPage />} />
 
@@ -45,7 +55,7 @@ function App() {
           />
         </Route>
       </Routes>
-      {/* <Tester></Tester> */}
+      {/*<Tester></Tester>*/}
     </Router>
   );
 }
