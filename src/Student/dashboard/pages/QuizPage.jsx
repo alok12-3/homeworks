@@ -3,26 +3,17 @@ import QuizFetch from "../../../Student/quizfetch";
 
 const cardsData = [
   {
-    topic: "Nature of the roots",
-    chapter: "Quadratic equations",
-    score: "75/100",
+    title: "Nature of the roots",
     status: "Pending",
   },
+
   {
-    topic: "Finding the roots",
-    chapter: "Quadratic equations",
-    score: "75/100",
+    title: "Finding the roots",
     status: "Pending",
-  },
-  {
-    topic: "Graph of a polynomial",
-    chapter: "Quadratic equations",
-    score: "85/100",
-    status: "Done",
   },
 ];
 
-const Card = ({ topic, chapter, score, status, isLast }) => (
+const Card = ({ title, status, isLast }) => (
   <div
     className={`w-full max-w-sm bg-white border border-gray-200 m-4 ${
       isLast ? "mb-20" : ""
@@ -84,7 +75,7 @@ const QuizPage = () => (
       ))}
     </div>
     {/* not working since not logged in   */}
-    {/* <QuizFetch /> */}
+    <QuizFetch />
   </>
 );
 

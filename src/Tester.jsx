@@ -11,9 +11,6 @@ function App() {
         <Blankdiv />
       </div>
     </div>
-    // <div>
-    //   <Input></Input>
-    // </div>
   );
 }
 
