@@ -154,6 +154,7 @@ import axios from "axios";
 
 const CreateStudent = () => {
   const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [selectedClassId, setSelectedClassId] = useState("");
 
@@ -193,6 +194,7 @@ const CreateStudent = () => {
         `${import.meta.env.VITE_BACKEND_URL}/api/new-student`,
         {
           username,
+          password,
           name,
           classId: selectedClassId,
           section,
@@ -212,6 +214,7 @@ const CreateStudent = () => {
       console.log("Student created:", response.data);
       alert("Student created successfully!");
       setUsername("");
+      setPassword("");
       setName("");
       setSelectedClassId("");
       setSection("");
@@ -246,6 +249,14 @@ const CreateStudent = () => {
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+        />
+      </div>
+      <div>
+        <label>Password:</label>
+        <input
+          type="text"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
         />
       </div>
       <div>

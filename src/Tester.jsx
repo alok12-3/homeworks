@@ -7,6 +7,7 @@ function App() {
   return (
     <div className="app-background">
       <Navbar />
+      <Blankdiv />
       <div className="main-content">
         <Blankdiv />
       </div>
