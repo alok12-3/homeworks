@@ -42,6 +42,7 @@ const DisplayResponses = ({ studentId }) => {
             {response.quizzes.map((quiz) => quiz.quiz.title).join(", ")}
           </h3>
           {response.quizzes.map((quiz) => (
+            // single quiz
             <div
               key={quiz._id}
               className="mb-4 p-4 border border-gray-200 rounded-lg shadow"

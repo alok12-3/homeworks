@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React, { useState } from "react";
+import { Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import Quiz from "./pages/Quiz";
 import Admin from "./pages/Admin";
@@ -16,6 +17,9 @@ import Tester from "./Tester";
 import LandingPage from "./pages/landingpage";
 import LoginPage from "./Authentication/LoginPage";
 import DemoPage from "./pages/Demo";
+import StudentDashboard from "./Student/dashboard/layout";
+import QuizPage from "../src/Student/dashboard/pages/QuizPage";
+
 function App() {
   return (
     <Router>
@@ -31,6 +35,15 @@ function App() {
         <Route path="/student/:username" element={<StudentLandingPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/demo" element={<DemoPage />} />
+
+        {/* here maybe you will have to fix the routing */}
+        <Route path="/student/dashboard" element={<StudentDashboard />}>
+          <Route path="quiz" element={<QuizPage />} />
+          <Route
+            index
+            element={<Navigate to="/student/dashboard/quiz" replace />}
+          />
+        </Route>
       </Routes>
       {/* <Tester></Tester> */}
     </Router>
