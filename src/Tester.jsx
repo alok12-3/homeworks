@@ -5,15 +5,15 @@ import Blankdiv from "./indcomponents/Blankdiv";
 import { Input } from "./components/ui/input";
 function App() {
   return (
-    // <div className="app-background">
-    //   <Navbar />
-    //   <div className="main-content">
-    //     <Blankdiv />
-    //   </div>
-    // </div>
-    <div>
-      <Input></Input>
+    <div className="app-background">
+      <Navbar />
+      <div className="main-content">
+        <Blankdiv />
+      </div>
     </div>
+    // <div>
+    //   <Input></Input>
+    // </div>
   );
 }
 
