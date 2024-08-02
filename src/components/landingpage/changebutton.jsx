@@ -41,10 +41,24 @@ const ChangeButton = () => {
   return (
     <>
       {scrolledPastHero ? (
-        <Button variant="solid">GET STARTED</Button>
+        <Link
+          to="/signup"
+          className={buttonVariants({
+            variant: "solid",
+            size: "lg",
+          })}
+        >
+          <div className="text-sm font-semibold">GET STARTED</div>
+        </Link>
       ) : (
-        <Link to="/login" className={buttonVariants({ variant: "light" })}>
-          TRY DEMO
+        <Link
+          to="/demo"
+          className={buttonVariants({
+            variant: "light",
+            size: "lg",
+          })}
+        >
+          <div className="text-sm font-semibold">TRY DEMO</div>
         </Link>
       )}
     </>

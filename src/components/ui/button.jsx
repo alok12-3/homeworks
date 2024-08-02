@@ -21,7 +21,7 @@ const buttonVariants = cva(
       size: {
         default: "h-11 px-4 py-2",
         sm: "h-9 px-3",
-        lg: "h-10  w-40",
+        lg: "h-10 px-4",
         icon: "h-11 w-11",
         none: "",
         rounded: "rounded-full",
@@ -36,11 +36,11 @@ const buttonVariants = cva(
 );
 
 const Button = React.forwardRef(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  ({ className, variant, size, textSize, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
+        className={cn(buttonVariants({ variant, size, textSize }), className)}
         ref={ref}
         {...props}
       />

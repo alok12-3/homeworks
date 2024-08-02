@@ -1,5 +1,6 @@
-import { Button } from "../ui/button";
 import heroimg from "/assets/heroimg.png"; // Adjust the path based on your file location
+import { Link } from "react-router-dom";
+import { buttonVariants } from "@/components/ui/button";
 
 export default function HeroSection() {
   return (
@@ -17,12 +18,20 @@ export default function HeroSection() {
             AI-Powered Learning, Uniquely Yours
           </h1>
           <div className="mt-10 flex flex-col items-center lg:items-start gap-y-4">
-            <Button variant="solid" size="full">
-              GET STARTED
-            </Button>
-            <Button variant="light" size="full">
-              ALREADY HAVE AN ACCOUNT
-            </Button>
+            <Link
+              to="/signup"
+              className={buttonVariants({ variant: "solid", size: "full" })}
+            >
+              <div className="text-sm font-semibold">GET STARTED</div>
+            </Link>
+            <Link
+              to="/login"
+              className={buttonVariants({ variant: "light", size: "full" })}
+            >
+              <div className="text-sm font-semibold">
+                I ALREADY HAVE AN ACCOUNT
+              </div>
+            </Link>
           </div>
         </div>
       </div>

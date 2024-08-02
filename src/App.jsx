@@ -14,6 +14,8 @@ import StudentsLoginPage from "./Student/LoginCreation";
 import StudentLandingPage from "./Student/StudentLandingPage"; // Adjust the import path as necessary
 import Tester from "./Tester";
 import LandingPage from "./pages/landingpage";
+import LoginPage from "./Authentication/LoginPage";
+import DemoPage from "./pages/Demo";
 function App() {
   return (
     <Router>
@@ -27,8 +29,10 @@ function App() {
         <Route path="/School" element={<SchoolManagement />} />
         <Route path="/studentlogin" element={<StudentsLoginPage />} />
         <Route path="/student/:username" element={<StudentLandingPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/demo" element={<DemoPage />} />
       </Routes>
-      {/* <Tester></Tester> */}
+      <Tester></Tester>
     </Router>
   );
 }

@@ -1,6 +1,10 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Input from "../components/ui/userinput";
+import { Button } from "../components/ui/button";
+import { Link } from "react-router-dom";
+import { buttonVariants } from "@/components/ui/button";
 
 const LoginPage = () => {
   const [username, setUsername] = useState("");
@@ -31,47 +35,83 @@ const LoginPage = () => {
       alert("Login failed");
     }
   };
-
+  const handleClick = () => {
+    navigate("/");
+  };
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6">
-      <h1 className="text-4xl font-bold mb-4">Login Page</h1>
-      <form
-        onSubmit={handleLogin}
-        className="bg-white p-6 rounded shadow-md w-full max-w-sm"
+    <div className="flex items-center justify-center min-h-screen relative">
+      <button
+        className="absolute top-4 right-8 text-gray-500 hover:text-gray-700 text-4xl"
+        aria-label="Close"
+        onClick={handleClick}
       >
-        <div className="mb-4">
-          <label htmlFor="username" className="block text-gray-700">
-            Username
-          </label>
-          <input
-            type="text"
-            id="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            className="w-full p-2 border rounded"
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="password" className="block text-gray-700">
-            Password
-          </label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className="w-full p-2 border rounded"
-            required
-          />
-        </div>
-        <button
-          type="submit"
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-        >
-          Login
-        </button>
-      </form>
+        &times;
+      </button>
+      <div className="bg-white px-8 rounded w-full max-w-md">
+        <h2 className="text-2xl font-bold mb-8 text-center">Log in</h2>
+        <form onSubmit={handleLogin}>
+          <div className="mb-4">
+            <Input
+              type="text"
+              id="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              placeholder="Username"
+              required
+            />
+          </div>
+          <div className="mb-4">
+            <Input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="w-full p-2 border rounded"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <div className="flex justify-between items-center mb-4">
+            <Link
+              to="/forgot-password"
+              className="text-blue-500 hover:underline"
+            >
+              Forgot Password?
+            </Link>
+          </div>
+          <Button variant="solid" size="full" type="submit">
+            Login
+          </Button>
+          <div className="mt-4 text-center text-gray-500 text-sm">
+            <p>
+              By signing in to Mimir, you agree to our{" "}
+              <a href="#" className="underline">
+                Terms
+              </a>{" "}
+              and{" "}
+              <a href="#" className="underline">
+                Privacy Policy
+              </a>
+              .
+            </p>
+          </div>
+          <div className="flex items-center my-4">
+            <div className="flex-grow border-t"></div>
+            <span className="mx-2 text-gray-500">Don't have an account?</span>
+            <div className="flex-grow border-t"></div>
+          </div>
+
+          <Link
+            to="/signup"
+            className={buttonVariants({
+              variant: "light",
+              size: "full",
+            })}
+          >
+            <div className="text-sm font-semibold">CREATE NEW ACCOUNT</div>
+          </Link>
+        </form>
+      </div>
     </div>
   );
 };

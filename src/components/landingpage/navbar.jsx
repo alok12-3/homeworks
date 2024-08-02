@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ChangeButton from "../landingpage/changebutton";
 import logo from "/assets/logo.png";
+
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
