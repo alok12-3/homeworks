@@ -19,7 +19,6 @@ import LoginPage from "./Authentication/LoginPage";
 import DemoPage from "./pages/Demo";
 import StudentDashboard from "./Student/dashboard/layout";
 import QuizPage from "../src/Student/dashboard/pages/QuizPage";
-
 import ProtectedRoute from "./Authentication/ProtectedRoute";
 function App() {
   return (
@@ -55,7 +54,7 @@ function App() {
           />
         </Route>
       </Routes>
-      {/*<Tester></Tester>*/}
+      {/* <Tester></Tester> */}
     </Router>
   );
 }
