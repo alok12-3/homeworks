@@ -1,41 +1,34 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
-import React from "react";
-import LandingPage from "./pages/landingpage/LandingPage";
-import Practice from "../src/pages/student_dashboard/pages/PracticePage";
-import Quiz from "./pages/student_dashboard/pages/QuizPage";
-import Daily from "./pages/student_dashboard/pages/DailyPage";
-import StudentDashboard from "./pages/student_dashboard/layout";
-import LoginPage from "./pages/authentication/LoginPage";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useState } from "react";
+import Home from "./pages/Home";
+import Quiz from "./pages/Quiz";
+import Admin from "./pages/Admin";
+import History from "./pages/History";
+import Navbar from "./indcomponents/Navbar"; // Adjust the import path as necessary
+import "./App.css"; // Import the App.css file
+import Blankdiv from "./indcomponents/Blankdiv";
+import TeacherLandingPage from "./Teachers/TeacherLandingPage/TecherLandingPage";
+import TeacherLogin from "./Teachers/TeacherLogin/TeacherLogin"; // Adjust the import path as necessary
+import SchoolManagement from "./SchoolManagementSystem/SchoolManagement"; // Adjust the import path as necessary
+import StudentsLoginPage from "./Student/LoginCreation";
+import StudentLandingPage from "./Student/StudentLandingPage"; // Adjust the import path as necessary
+import Tester from "./Tester";
+import LandingPage from "./pages/landingpage";
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/login" element={<LoginPage />} />
-        {/* <Route path="/quiz" element={<Quiz />} />
+        <Route path="/quiz" element={<Quiz />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/history" element={<History />} />
         <Route path="/teacher/:username" element={<TeacherLandingPage />} />
         <Route path="/teacher" element={<TeacherLogin />} />
-        <Route path="/School" element={<SchoolManagement />} /> */}
-        {/* <Route path="/studentlogin" element={<StudentsLoginPage />} />
-        <Route path="/student/:username" element={<StudentLandingPage />} /> */}
-        <Route path="/student/dashboard" element={<StudentDashboard />}>
-          <Route path="practice" element={<Practice />} />
-          <Route path="quiz" element={<Quiz />} />
-          <Route path="daily" element={<Daily />} />
-          <Route
-            index
-            element={<Navigate to="/student/dashboard/quiz" replace />}
-          />
-        </Route>
+        <Route path="/School" element={<SchoolManagement />} />
+        <Route path="/studentlogin" element={<StudentsLoginPage />} />
+        <Route path="/student/:username" element={<StudentLandingPage />} />
       </Routes>
+      {/* <Tester></Tester> */}
     </Router>
   );
 }

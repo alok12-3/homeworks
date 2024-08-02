@@ -1,0 +1,35 @@
+/* Button.module.css */
+.duolingoButton {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem;
+  padding: 0.8em 1em;
+  color: #000000;
+  background-color: #ffffff;
+  border-radius: 0.8em;
+  box-shadow: 0 3px #b9bcbe;
+  border: 0.05em solid #ced4da;
+
+  transition: all 0.01s;
+  user-select: none;
+  margin-bottom: 0.4em;
+}
+
+.duolingoButtonText {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+  font-size: small;
+  font-family: "Gill Sans", "Gill Sans MT";
+  color: rgb(74, 72, 72);
+}
+
+.duolingoButton:focus,
+.duolingoButton:hover {
+  outline: 2px #1971c2;
+}
+
+.duolingoButton:active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
