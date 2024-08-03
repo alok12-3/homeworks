@@ -8,7 +8,6 @@ const StudentDashboard = () => {
   const { username } = useParams();
   const [student, setStudent] = useState(null);
   const [error, setError] = useState("");
-
   useEffect(() => {
     const fetchStudent = async () => {
       try {

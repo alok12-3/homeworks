@@ -7,7 +7,6 @@ const ClassDetails = ({ student }) => {
   const [quizzes, setQuizzes] = useState([]);
   const [error, setError] = useState("");
   const [selectedQuizId, setSelectedQuizId] = useState("");
-
   useEffect(() => {
     const fetchClassDetails = async () => {
       try {
