@@ -4,20 +4,20 @@ import { buttonVariants } from "@/components/ui/button";
 
 export default function HeroSection() {
   return (
-    <div className="bg-white flex items-center justify-center min-h-screen">
+    <div className="bg-white flex items-center justify-center min-h-screen pb-10 sm:p-6 md:p-8 lg:p-10">
       <div className="px-6 lg:px-8 flex flex-col lg:flex-row items-center max-w-6xl sm:py-40 lg:py-10">
-        <div className="lg:w-2/5 mt-10 lg:mt-0 lg:pr-8">
+        <div className="lg:w-3/6 mt-10 lg:mt-0 lg:pr-8">
           <img
             src={heroimg}
             alt="Placeholder"
-            className="w-full h-auto max-h-96 object-cover"
+            className="w-full h-auto object-cover transform scale-90"
           />
         </div>
-        <div className="lg:w-3/5 text-center lg:text-left">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl ">
-            AI-Powered Learning, Uniquely Yours
+        <div className="lg:w-3/6 text-center lg:text-left">
+          <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl text-center px-4 ">
+            Helping teachers focus on students and personalize with ease
           </h1>
-          <div className="mt-10 flex flex-col items-center lg:items-start gap-y-4">
+          <div className="mt-10 flex flex-col items-center gap-y-4 justify-center">
             <Link
               to="/signup"
               className={buttonVariants({ variant: "solid", size: "full" })}

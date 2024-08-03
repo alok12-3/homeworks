@@ -3,9 +3,9 @@
   align-items: center;
   padding: 0.8em 1em;
   color: #ffffff;
-  background-color: #434242;
+  background-color: #4285f4;
   border-radius: 0.8em;
-  box-shadow: 0 4px #000000;
+  box-shadow: 0 4px #1e51a2;
   transition: all 0.0009s;
   user-select: none;
   margin-bottom: 0.4em;
@@ -13,7 +13,7 @@
 
 .duolingoButton:focus,
 .duolingoButton:hover {
-  background-color: #454545;
+  background-color: #3976d7;
   outline: 2px #1971c2;
 }
 
