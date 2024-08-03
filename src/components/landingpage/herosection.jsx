@@ -4,7 +4,7 @@ import { buttonVariants } from "@/components/ui/button";
 
 export default function HeroSection() {
   return (
-    <div className="bg-white flex items-center justify-center min-h-screen pb-10 sm:p-6 md:p-8 lg:p-10">
+    <div className="bg-white flex items-center justify-center min-h-screen pb-10">
       <div className="px-6 lg:px-8 flex flex-col lg:flex-row items-center max-w-6xl sm:py-40 lg:py-10">
         <div className="lg:w-3/6 mt-10 lg:mt-0 lg:pr-8">
           <img
