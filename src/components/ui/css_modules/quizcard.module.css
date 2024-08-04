@@ -23,6 +23,6 @@ body * {
 }
 .card:focus,
 .card:hover {
-  background-color: #e9ecef;
+  background-color: #ffffff;
   outline: 2px #1971c2;
 }

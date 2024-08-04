@@ -56,7 +56,7 @@ function App() {
           <Route path="practice" element={<PracticePage />} />
         </Route>
       </Routes>
-      <Tester></Tester>
+      {/* <Tester></Tester> */}
     </Router>
   );
 }

@@ -17,6 +17,7 @@
 .duolingoButton:focus,
 .duolingoButton:hover {
   outline: 2px #1971c2;
+  background-color: #f7f7f7;
 }
 
 .duolingoButton:active {
