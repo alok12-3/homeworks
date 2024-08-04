@@ -17,6 +17,7 @@ const buttonVariants = cva(
         secondary: darkStyles.secondary,
         success: darkStyles.success,
         danger: darkStyles.danger,
+        withoutShadow: `${darkStyles.duolingoButton} shadow-none`,
       },
       size: {
         default: "h-11 px-4 py-2",

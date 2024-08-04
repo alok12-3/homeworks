@@ -12,7 +12,6 @@ const DashboardContent = ({ setActiveTab }) => {
   const { username } = useParams();
   const { student, setStudent } = useStudent();
   const [error, setError] = useState("");
-  console.log(username);
   useEffect(() => {
     const fetchStudent = async () => {
       try {
@@ -40,7 +39,6 @@ const DashboardContent = ({ setActiveTab }) => {
     return <p>Loading...</p>;
   }
   const { collapsed } = useSidebar();
-  // console.log(student);
   return (
     <div className="flex ">
       <div className="fixed">
