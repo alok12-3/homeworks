@@ -3,7 +3,7 @@ import React from "react";
 // import DisplayResponses from "./DisplayResponses";
 // import ClassDetails from "./StudentClass";
 
-const QuizPage = () => {
+const PracticePage = () => {
   return (
     // <div>
     //   <h1>Welcome, {student.name}</h1>
@@ -18,8 +18,8 @@ const QuizPage = () => {
     //   {/* <DisplayResponses studentId={student._id} /> */}
     //   {/* <ClassDetails student={student} /> */}
     // </div>
-    <h1>quiz page</h1>
+    <h1>practice page</h1>
   );
 };
 
-export default QuizPage;
+export default PracticePage;

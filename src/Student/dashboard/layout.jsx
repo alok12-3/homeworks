@@ -4,9 +4,9 @@ import Sidebar from "../../components/studentdashboard/SideBar";
 import TabBar from "../../components/studentdashboard/TabBar";
 import { SidebarProvider, useSidebar } from "../../hooks/useSidebar";
 
-const StudentDashboardContent = ({ setActiveTab }) => {
+const DashboardContent = ({ setActiveTab, student }) => {
   const { collapsed } = useSidebar();
-
+  console.log(student);
   return (
     <div className="flex ">
       <div className="fixed">
@@ -20,14 +20,14 @@ const StudentDashboardContent = ({ setActiveTab }) => {
   );
 };
 
-const StudentDashboard = () => {
+const Dashboard = ({ student }) => {
   const [activeTab, setActiveTab] = useState("quiz");
 
   return (
     <SidebarProvider>
-      <StudentDashboardContent setActiveTab={setActiveTab} />
+      <DashboardContent setActiveTab={setActiveTab} student={student} />
     </SidebarProvider>
   );
 };
 
-export default StudentDashboard;
+export default Dashboard;

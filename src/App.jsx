@@ -19,6 +19,8 @@ import LoginPage from "./Authentication/LoginPage";
 import DemoPage from "./pages/Demo";
 import StudentDashboard from "./Student/dashboard/layout";
 import QuizPage from "../src/Student/dashboard/pages/QuizPage";
+import PracticePage from "../src/Student/dashboard/pages/PracticePage";
+
 import ProtectedRoute from "./Authentication/ProtectedRoute";
 function App() {
   return (
@@ -38,19 +40,20 @@ function App() {
           element={<ProtectedRoute element={SchoolManagement} />}
         />
         <Route path="/studentlogin" element={<StudentsLoginPage />} />
-        <Route
+        {/* <Route
           path="/student/:username"
           element={<ProtectedRoute element={StudentLandingPage} />}
-        />
+        /> */}
         <Route path="/login" element={<LoginPage />} />
         <Route path="/demo" element={<DemoPage />} />
 
         {/* here maybe you will have to fix the routing */}
         <Route
-          path="/student/dashboard"
-          element={<ProtectedRoute element={StudentDashboard} />}
+          path="/student/:username"
+          element={<ProtectedRoute element={StudentLandingPage} />}
         >
           <Route path="quiz" element={<QuizPage />} />
+          <Route path="practice" element={<PracticePage />} />
 
           <Route
             index
