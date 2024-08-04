@@ -20,7 +20,7 @@ const LoginPage = () => {
         { username, password }
       );
       localStorage.setItem("token", response.data.token);
-      navigate(`/student/dashboard/${username}`);
+      navigate(`/student/${username}`);
     } catch (error) {
       console.error("Error fetching student:", error);
       setError(

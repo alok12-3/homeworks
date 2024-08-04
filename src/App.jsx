@@ -47,7 +47,7 @@ function App() {
 
         {/* here maybe you will have to fix the routing */}
         <Route
-          path="/student/dashboard/:username"
+          path="/student/dashboard"
           element={<ProtectedRoute element={StudentDashboard} />}
         >
           <Route path="quiz" element={<QuizPage />} />
