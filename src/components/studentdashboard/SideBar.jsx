@@ -5,7 +5,7 @@ import {
   FaBars,
   FaArrowLeft,
 } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useSidebar } from "../../hooks/useSidebar";
 import { FaCalendarAlt } from "react-icons/fa";
 
@@ -13,6 +13,7 @@ const Sidebar = ({ setActiveTab }) => {
   const [activeTab, setActiveTabLocal] = useState("quiz");
   const { collapsed, setCollapsed } = useSidebar();
   const navigate = useNavigate();
+  const { username } = useParams(); // Extract the username parameter
 
   const tabs = [
     { name: "quiz", icon: <FaQuestionCircle />, label: "Quiz" }, // Added FaQuestionCircle for quiz
@@ -23,7 +24,7 @@ const Sidebar = ({ setActiveTab }) => {
   const handleTabClick = (tabName) => {
     setActiveTabLocal(tabName);
     setActiveTab(tabName);
-    navigate(`/student/dashboard/${tabName}`);
+    navigate(`/student/${username}/${tabName}`); // Include the username in the path
   };
 
   return (

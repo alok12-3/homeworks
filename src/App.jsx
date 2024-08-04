@@ -17,7 +17,6 @@ import Tester from "./Tester";
 import LandingPage from "./pages/landingpage";
 import LoginPage from "./Authentication/LoginPage";
 import DemoPage from "./pages/Demo";
-import StudentDashboard from "./Student/dashboard/layout";
 import QuizPage from "../src/Student/dashboard/pages/QuizPage";
 import PracticePage from "../src/Student/dashboard/pages/PracticePage";
 
@@ -52,13 +51,9 @@ function App() {
           path="/student/:username"
           element={<ProtectedRoute element={StudentLandingPage} />}
         >
+          <Route index element={<Navigate to="quiz" replace />} />
           <Route path="quiz" element={<QuizPage />} />
           <Route path="practice" element={<PracticePage />} />
-
-          <Route
-            index
-            element={<Navigate to="/student/dashboard/quiz" replace />}
-          />
         </Route>
       </Routes>
       {/* <Tester></Tester> */}

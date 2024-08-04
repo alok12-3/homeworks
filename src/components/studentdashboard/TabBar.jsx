@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { FaDumbbell, FaQuestionCircle } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaCalendarAlt } from "react-icons/fa";
+import { useNavigate, useParams } from "react-router-dom";
 
 const TabBar = ({ setActiveTab }) => {
   const [activeTab, setActiveTabLocal] = useState("quiz");
   const navigate = useNavigate();
+  const { username } = useParams(); // Extract the username parameter
 
   const tabs = [
     { name: "quiz", icon: <FaQuestionCircle />, label: "Quiz" }, // Added FaQuestionCircle for quiz
@@ -16,7 +18,7 @@ const TabBar = ({ setActiveTab }) => {
   const handleTabClick = (tabName) => {
     setActiveTabLocal(tabName);
     setActiveTab(tabName);
-    navigate(`/student/dashboard/${tabName}`);
+    navigate(`/student/${username}/${tabName}`);
   };
 
   return (
