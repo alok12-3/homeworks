@@ -4,9 +4,9 @@ import QuizCard from "../../../components/ui/quizcard";
 const QuizPage = () => {
   // Manually created quiz data
   const quizzes = [
-    { title: "Math Quiz", isSolved: true },
-    { title: "Science Quiz", isSolved: false },
-    { title: "History Quiz", isSolved: true },
+    { id: "a1b2c3d4e5", title: "Math Quiz", isSolved: true },
+    { id: "f6g7h8i9j0", title: "Science Quiz", isSolved: false },
+    { id: "k1l2m3n4o5", title: "History Quiz", isSolved: true },
   ];
 
   return (
