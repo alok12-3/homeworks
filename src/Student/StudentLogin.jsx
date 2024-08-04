@@ -16,7 +16,7 @@ const LoginStudent = () => {
         { username, password }
       );
       localStorage.setItem("token", response.data.token);
-      navigate(`/student/${username}`);
+      navigate(`/student/dashboard/${username}`);
     } catch (error) {
       console.error("Error fetching student:", error);
       setError(

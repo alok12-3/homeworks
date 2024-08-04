@@ -46,8 +46,12 @@ function App() {
         <Route path="/demo" element={<DemoPage />} />
 
         {/* here maybe you will have to fix the routing */}
-        <Route path="/student/dashboard" element={<StudentDashboard />}>
+        <Route
+          path="/student/dashboard/:username"
+          element={<ProtectedRoute element={StudentDashboard} />}
+        >
           <Route path="quiz" element={<QuizPage />} />
+
           <Route
             index
             element={<Navigate to="/student/dashboard/quiz" replace />}

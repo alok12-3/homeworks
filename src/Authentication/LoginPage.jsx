@@ -8,31 +8,24 @@ import { buttonVariants } from "@/components/ui/button";
 
 const LoginPage = () => {
   const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState(""); // Add state for password
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:3000/api/users/login", {
-        username,
-        password,
-      });
-      localStorage.setItem("token", res.data.token);
-      localStorage.setItem("category", res.data.category);
-      const category = res.data.category;
-      if (category === "p") {
-        navigate("/principal");
-      } else if (category === "t") {
-        navigate("/teacher");
-      } else if (category === "s") {
-        navigate("/student");
-      } else {
-        navigate("/demo");
-      }
+      const response = await axios.post(
+        `${import.meta.env.VITE_BACKEND_URL}/auth/login`,
+        { username, password }
+      );
+      localStorage.setItem("token", response.data.token);
+      navigate(`/student/dashboard/${username}`);
     } catch (error) {
-      console.error("Login error", error);
-      alert("Login failed");
+      console.error("Error fetching student:", error);
+      setError(
+        error.response ? error.response.data.message : "Failed to fetch student"
+      );
     }
   };
   const handleClick = () => {

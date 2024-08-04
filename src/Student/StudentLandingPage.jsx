@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import ClassDetails from "./StudentClass";
 import DisplayResponses from "./DisplayResponses";
+// import StudentDashboard from "./dashboard/layout";
 
 const StudentDashboard = () => {
   const { username } = useParams();
@@ -36,19 +37,22 @@ const StudentDashboard = () => {
   }
 
   return (
-    <div>
-      <h1>Welcome, {student.name}</h1>
-      <p>Username: {student.username}</p>
-      <p>Class: {student.class}</p>
-      <p>Section: {student.section}</p>
-      <p>Age: {student.age}</p>
-      <p>Address: {student.address}</p>
-      <p>Phone Number: {student.phoneNumber}</p>
-      <p>School ID: {student.schoolId}</p>
-      {/* Add more fields as necessary */}
-      <DisplayResponses studentId={student._id} />
-      <ClassDetails student={student} />
-    </div>
+    <>
+      <div>
+        <h1>Welcome, {student.name}</h1>
+        <p>Username: {student.username}</p>
+        <p>Class: {student.class}</p>
+        <p>Section: {student.section}</p>
+        <p>Age: {student.age}</p>
+        <p>Address: {student.address}</p>
+        <p>Phone Number: {student.phoneNumber}</p>
+        <p>School ID: {student.schoolId}</p>
+        {/* Add more fields as necessary */}
+        <DisplayResponses studentId={student._id} />
+        <ClassDetails student={student} />
+      </div>
+      {/* <StudentDashboard></StudentDashboard> */}
+    </>
   );
 };
 
