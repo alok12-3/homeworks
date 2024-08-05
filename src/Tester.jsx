@@ -4,6 +4,8 @@ import "./App.css"; // Import the App.css file
 import Blankdiv from "./indcomponents/Blankdiv";
 import { Input } from "./components/ui/input";
 import QuizCard from "./components/ui/quizcard";
+import "katex/dist/katex.min.css";
+import { BlockMath } from "react-katex";
 import {
   Tabs,
   TabsContent,

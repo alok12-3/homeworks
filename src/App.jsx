@@ -19,7 +19,7 @@ import LoginPage from "./Authentication/LoginPage";
 import DemoPage from "./pages/Demo";
 import QuizPage from "../src/Student/dashboard/pages/QuizPage";
 import PracticePage from "../src/Student/dashboard/pages/PracticePage";
-
+import ReviewQuizPage from "./Student/quiz/reviewQuizPage";
 import ProtectedRoute from "./Authentication/ProtectedRoute";
 function App() {
   return (
@@ -45,7 +45,7 @@ function App() {
         /> */}
         <Route path="/login" element={<LoginPage />} />
         <Route path="/demo" element={<DemoPage />} />
-
+        <Route path="/review" element={<ReviewQuizPage />}></Route>
         {/* here maybe you will have to fix the routing */}
         <Route
           path="/student/:username"

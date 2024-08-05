@@ -1,6 +1,6 @@
 import React from "react";
 
-function attemptQuiz() {
+function attemptQuizPage() {
   return <div></div>;
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import QuizCard from "../../../components/ui/quizcard";
 import TabComponent from "../../../components/ui/tabSlider";
-
+import ReviewQuizPage from "../../quiz/reviewQuizPage";
 const QuizPage = () => {
   // Manually created quiz data
   const quizzes = [
@@ -18,6 +18,7 @@ const QuizPage = () => {
           <QuizCard key={index} quiz={quiz} />
         ))}
       </div>
+      <ReviewQuizPage></ReviewQuizPage>
     </>
   );
 };

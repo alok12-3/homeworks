@@ -5,7 +5,7 @@ const TabComponent = () => {
   const [activeTab, setActiveTab] = useState("Pending");
 
   return (
-    <div className="flex justify-center items-center space-x-10 py-4 bg-gray-50 border-b-2 border-gray-200">
+    <div className="flex justify-center items-center space-x-10 py-4 bg-gray-50 border-b-2 border-gray-200 sticky top-0 z-50">
       <Button
         variant={activeTab === "Pending" ? "withoutShadow" : "light"}
         onClick={() => setActiveTab("Pending")}
